@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Journal – Ryan Scogna</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #1a1a1a;
+      color: white;
+      padding: 1rem 2rem;
+    }
+    nav a {
+      color: #ccc;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: white;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+    details {
+      margin-bottom: 1rem;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ryan Scogna – Journal</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="journal.html">Journal</a>
+    </nav>
+  </header>
+
+ <main>
+  <h2>Developer Journal</h2>
+
+  <details>
+    <summary><strong>2025</strong></summary>
+
+    <details>
+      <summary><strong>May</strong></summary>
+
+      <details>
+        <summary>2025-05-13 – Started Journal Layout</summary>
+        <p>Created a separate journal.html page. Decided to use collapsible entries grouped by year and month for better organization.</p>
+      </details>
+
+      <details>
+        <summary>2025-05-12 – Tkinter App Issue</summary>
+        <p>Tried to open a window with <code>tk.Tk</code> but forgot the parentheses and <code>mainloop()</code>.</p>
+      </details>
+	
+	<details>
+	 <p><summary>2025-05-10 - Creating Journal Website  </summary> – Learned about basic HTML structure and created sections for About, Projects, and Journal.</p>
+	</details>
+	
+	<details>
+	 <p><summary>2025-05-09 - Returning to GitHub</summary> – Set up GitHub Pages and created this site.</p>
+	<details>
+
+        
+       
+
+      <!-- More May entries -->
+
+    </details>
+
+    <details>
+      <summary><strong>April</strong></summary>
+      <details>
+        <summary>2025-04-28 – Set Up GitHub Pages</summary>
+        <p>Initial GitHub Pages site setup. Practiced some basic HTML and CSS.</p>
+      </details>
+      <!-- More April entries -->
+    </details>
+
+  </details>
+</main>
