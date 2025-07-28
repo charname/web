@@ -64,8 +64,23 @@
 
       <details>
         <summary><strong>July</strong></summary>
-        
-       <details>
+      <details>
+        <summary><strong>2025-07-25</strong> Immich Working Successfully</summary>
+
+<p> Immich is now up and running. The issue was with my initial dataset configuration it was incorrectly set to "Generic" when it should have been set as "App." To fix this, I deleted the original dataset and recreated both the upload and database datasets, assigning one as "Generic" and the other as "App." After that, Immich began functioning correctly after setup configuratiion.
+
+I then discovered a more efficient upload method. While drag-and-drop works, there’s a CLI command (requires SSH into Immich) that performs a recursive crawl on specified folders. This method was a game changer. It not only identified duplicate files but automatically excluded them from being uploaded, flagging them for manual review instead, a feature I hadn’t known about, but one I now see as invaluable.
+
+Another highlight: failed uploads are clearly displayed in the CLI, including full file paths. This made it easy to target and re-run uploads just for the failed paths. Thanks to the duplicate detection, I didn’t have to worry about re-uploading previously processed files.
+
+Although this was mostly an experiment, the results were impressive. I may undo the current setup, but Immich has made a strong case for future use, especially once my photo collection is fully organized. I haven’t explored features like Archive or Lock yet.
+
+For now, I’m marking the Immich trial as complete. It fulfilled the core functions I needed. There’s still more to explore, such as setting up HTTPS and encryption, but since these were just test folders, there's no rush.
+
+Next steps: I’ll continue to dabble with Immich alongside exploring TrueNAS SCALE. </p>
+        </details>
+       
+        <details>
           <summary><strong>2025-07-24</strong> – TrueNAS Core upgrade to TrueNAS Scale</summary>
           This project has been ongoing since the 19th, with the main objective being to set up Immich. While it is possible to run a Linux VM on TrueNAS Core and install Docker within it, I was presented with the option to upgrade to TrueNAS SCALE. SCALE allows Docker to run natively on the host OS, which reduces overhead compared to using a VM.
 
