@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Development – Ryan Scogna</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #1a1a1a;
+      color: white;
+      padding: 1rem 2rem;
+    }
+    nav a {
+      color: #ccc;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: white;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+    details {
+      margin-bottom: 1rem;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ryan Scogna – Development</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="journal.html">Journal</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Skill Development Timeline</h2>
+    <p>This page summarizes my technical growth and the skills I've gained while learning Python, Linux, and Cybersecurity — organized from oldest to newest.</p>
+
+    <details open>
+      <summary>🌐 Web & Development Foundations</summary>
+      <ul>
+        <li>Set up <strong>GitHub Pages</strong> and learned basic <strong>HTML/CSS</strong>.</li>
+        <li>Built and linked site pages (<code>index.html</code>, <code>projects.html</code>, <code>journal.html</code>).</li>
+        <li>Implemented collapsible sections using <code>&lt;details&gt;</code> / <code>&lt;summary&gt;</code>.</li>
+        <li>Debugged page link issues and improved overall site structure.</li>
+        <li>Organized projects and learned basic web publishing workflow.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>🐍 Python Programming</summary>
+      <ul>
+        <li>Reviewed fundamentals via <em>Python Crash Course</em> (variables, loops, conditionals).</li>
+        <li>Completed dictionary labs and nested structures (lists ↔ dictionaries).</li>
+        <li>Worked through <strong>while loops</strong> and control flow concepts.</li>
+        <li>Created small projects:
+          <ul>
+            <li><strong>Tkinter GUI</strong> app (debugged <code>mainloop()</code> issue).</li>
+            <li><strong>Weather Fetcher App</strong> using API calls.</li>
+          </ul>
+        </li>
+        <li>Set up and used <strong>IntelliJ IDEA</strong> for Python projects.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>💾 Systems & Virtualization</summary>
+      <ul>
+        <li>Installed and configured <strong>TrueNAS Core</strong>, later upgraded to <strong>TrueNAS SCALE</strong>.</li>
+        <li>Learned dataset configuration and Docker integration on SCALE.</li>
+        <li>Tested <strong>Immich photo server</strong>:
+          <ul>
+            <li>Fixed dataset type (“App” vs “Generic”) issue.</li>
+            <li>Used CLI recursive upload with duplicate detection.</li>
+            <li>Learned file retry and review process.</li>
+          </ul>
+        </li>
+        <li>Explored HTTPS and encryption options for self-hosted services.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>🎨 AI & Creative Tools</summary>
+      <ul>
+        <li>Installed and configured <strong>ComfyUI</strong> with <strong>Wan 2.1 model</strong>.</li>
+        <li>Generated image-to-video outputs and explored rendering workflow.</li>
+        <li>Learned about model setup, file sizes, and GPU workload management.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>🛡️ Cybersecurity & Networking</summary>
+      <h3>Reconnaissance & OSINT</h3>
+      <ul>
+        <li>Studied APTs, Botnets, Cloud risks, and Insider threats.</li>
+        <li>Practiced <strong>Google Dorking</strong> and search operators for passive recon.</li>
+        <li>Used <strong>Metagoofil</strong> for document metadata extraction.</li>
+        <li>Performed <strong>Email Header Analysis</strong> using EmailTrackerPro and MxToolbox.</li>
+        <li>Explored WHOIS, DNS, and IP lookup tools (<code>whois</code>, <code>dig</code>, <code>nslookup</code>).</li>
+      </ul>
+
+      <h3>Network Discovery & Scanning</h3>
+      <ul>
+        <li>Studied DNS record types (A, MX, TXT, NS, SOA, etc.).</li>
+        <li>Learned <strong>Nmap</strong> essentials:
+          <ul>
+            <li>Flags: <code>-sS</code>, <code>-sV</code>, <code>-O</code>, <code>-A</code>, <code>--top-ports</code></li>
+            <li>Service/version detection and OS fingerprinting.</li>
+            <li>Used Nmap Scripting Engine (NSE).</li>
+          </ul>
+        </li>
+        <li>Understood <strong>TCP Handshake</strong>, <strong>RST behavior</strong>, and <strong>firewall detection</strong>.</li>
+        <li>Learned the concept of <strong>Idle (Zombie) Scanning</strong>.</li>
+      </ul>
+
+      <h3>Vulnerability Assessment</h3>
+      <ul>
+        <li>Installed and configured <strong>Nessus (Tenable)</strong> vulnerability scanner.</li>
+        <li>Created custom scan policies and performed credentialed scans.</li>
+        <li>Learned reporting workflow:
+          <ul>
+            <li>Discovery → Scan → Service Detection → Reporting.</li>
+            <li>Interpreted CVSS-based severity and remediation suggestions.</li>
+          </ul>
+        </li>
+        <li>Practiced ethical scanning, rate limiting, and scope management.</li>
+      </ul>
+
+      <h3>Network Mapping & Management</h3>
+      <ul>
+        <li>Used <strong>SolarWinds Network Topology Mapper</strong> to visualize network devices.</li>
+        <li>Learned SNMP/WMI-based discovery and map generation.</li>
+        <li>Exported network diagrams and compared scans for changes over time.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>🔒 Security Concepts & Fundamentals</summary>
+      <ul>
+        <li>Understood the <strong>5 attack phases</strong>: Recon, Scanning, Gaining Access, Persistence, Covering Tracks.</li>
+        <li>Reviewed <strong>OSI & TCP/IP layers</strong> and <strong>3-way handshake</strong>.</li>
+        <li>Learned about common attack types:
+          <ul>
+            <li>XSS, SQL Injection, MITM, DoS, Buffer Overflow.</li>
+          </ul>
+        </li>
+        <li>Studied insider threats, mobile vulnerabilities, and the importance of ethical constraints.</li>
+      </ul>
+    </details>
+  </main>
+</body>
+</html>
