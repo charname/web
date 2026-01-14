@@ -1,181 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Journal – Ryan Scogna</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #1a1a1a;
-      color: white;
-      padding: 1rem 2rem;
-    }
-    nav a {
-      color: #ccc;
-      margin-right: 1rem;
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: white;
-    }
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1, h2 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
-    details {
-      margin-bottom: 1rem;
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      border-radius: 5px;
-    }
-    summary {
-      font-weight: bold;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Ryan Scogna – Journal</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="journal.html">Journal</a>
-    </nav>
-  </header>
+<!-- ADD BELOW YOUR EXISTING JULY SECTION INSIDE <details><summary><strong>2025</strong></summary> -->
 
-  <main>
-    <h2>Developer Journal</h2>
+<details>
+  <summary><strong>October</strong></summary>
 
-    <details>
-      <summary><strong>2025</strong></summary>
+  <details>
+    <summary><strong>2025-10-16</strong> – Transition into Security Operations Focus</summary>
+    <p>
+      Shifted daily focus toward security operations work. Began structured review of phishing platforms,
+      endpoint security tooling, and internal processes. Started maintaining more formal notes
+      around campaigns, configurations, and operational gaps.
+    </p>
+  </details>
 
-      <details>
-        <summary><strong>July</strong></summary>
-      <details>
-        <summary><strong>2025-07-25</strong> Immich Working Successfully</summary>
+  <details>
+    <summary><strong>2025-10-23</strong> – KnowBe4 Platform Review & Foundations</summary>
+    <p>
+      Reviewed KnowBe4 documentation, ModStore, phishing templates, training workflows, and platform capabilities.
+      Began comparing KnowBe4 functionality against existing Cofense usage to identify overlap and gaps.
+    </p>
+  </details>
 
-<p> Immich is now up and running. The issue was with my initial dataset configuration it was incorrectly set to "Generic" when it should have been set as "App." To fix this, I deleted the original dataset and recreated both the upload and database datasets, assigning one as "Generic" and the other as "App." After that, Immich began functioning correctly after setup configuratiion.
+  <details>
+    <summary><strong>2025-10-30</strong> – KnowBe4 SCIM, Whitelisting, and Access Controls</summary>
+    <p>
+      Configured Entra ID SCIM provisioning for KnowBe4 and validated user sync behavior.
+      Documented limitations (no nested groups, no alias sync).
+      Completed whitelisting wizard and verified mail flow.
+      Enabled SSO/SAML and configured MFA for admin access.
+    </p>
+  </details>
+</details>
 
-I then discovered a more efficient upload method. While drag-and-drop works, there’s a CLI command (requires SSH into Immich) that performs a recursive crawl on specified folders. This method was a game changer. It not only identified duplicate files but automatically excluded them from being uploaded, flagging them for manual review instead, a feature I hadn’t known about, but one I now see as invaluable.
+<details>
+  <summary><strong>November</strong></summary>
 
-Another highlight: failed uploads are clearly displayed in the CLI, including full file paths. This made it easy to target and re-run uploads just for the failed paths. Thanks to the duplicate detection, I didn’t have to worry about re-uploading previously processed files.
+  <details>
+    <summary><strong>2025-11-05</strong> – Smart Group Logic & Campaign Issues Identified</summary>
+    <p>
+      Discovered Smart Groups were misconfigured, resulting in empty phishing campaigns.
+      Investigated targeting logic and began restructuring baseline user groups.
+      Identified issues with failure-based grouping and reporting thresholds.
+    </p>
+  </details>
 
-Although this was mostly an experiment, the results were impressive. I may undo the current setup, but Immich has made a strong case for future use, especially once my photo collection is fully organized. I haven’t explored features like Archive or Lock yet.
+  <details>
+    <summary><strong>2025-11-12</strong> – Phishing Campaign Architecture Discovery</summary>
+    <p>
+      Confirmed KnowBe4 sends only one phishing email per user per campaign run.
+      Learned that frequency and send window settings do not increase email volume.
+      Determined that multiple parallel campaigns are required to meet weekly phishing goals.
+    </p>
+  </details>
 
-For now, I’m marking the Immich trial as complete. It fulfilled the core functions I needed. There’s still more to explore, such as setting up HTTPS and encryption, but since these were just test folders, there's no rush.
+  <details>
+    <summary><strong>2025-11-19</strong> – Campaign Redesign & AIDA Standardization</summary>
+    <p>
+      Rebuilt phishing architecture using three parallel campaigns (Beginner, Intermediate, Advanced).
+      Standardized templates using AIDA adaptive difficulty.
+      Corrected reporting logic and validated targeting behavior through test groups.
+    </p>
+  </details>
 
-Next steps: I’ll continue to dabble with Immich alongside exploring TrueNAS SCALE. </p>
-        </details>
-       
-        <details>
-          <summary><strong>2025-07-24</strong> – TrueNAS Core upgrade to TrueNAS Scale</summary>
-          This project has been ongoing since the 19th, with the main objective being to set up Immich. While it is possible to run a Linux VM on TrueNAS Core and install Docker within it, I was presented with the option to upgrade to TrueNAS SCALE. SCALE allows Docker to run natively on the host OS, which reduces overhead compared to using a VM.
+  <details>
+    <summary><strong>2025-11-26</strong> – Reporting & Executive Summaries</summary>
+    <p>
+      Produced phishing engagement summaries including reporting rates, failure rates,
+      and credential submissions. Prepared quarterly documentation and risk acceptance
+      review for leadership.
+    </p>
+  </details>
+</details>
 
-The process ended up being more complex than anticipated. Although TrueNAS Core offered a built-in upgrade path, it was unable to upgrade directly to version 25. I attempted to install an older version of SCALE instead, but it lacked the necessary features for installing Immich.
+<details>
+  <summary><strong>December</strong></summary>
 
-Ultimately, I had to perform a clean installation of SCALE, import my backed-up configuration files, and make a few adjustments along the way. Immich is not fully operational yet, but it is currently in progress.</p></details>
-        
-        <details>
-          <summary><strong>2025-07-09</strong> – Chapter 6 Completed</summary>
-          <p>Skimmed Chapter 6 and its labs in *Python Crash Course*. Moving on to Chapter 7, which covers while loops.</p>
-        </details>
+  <details>
+    <summary><strong>2025-12-02</strong> – Automation Framework & Platform Transitions</summary>
+    <p>
+      Finalized a repeatable KnowBe4 phishing framework requiring only quarterly date updates.
+      Continued API experimentation for internal automation.
+      Assisted with Cofense phase-out and KnowBe4 transition.
+      Supported Abnormal Security deployment and began Abnormal Academy training.
+    </p>
+  </details>
 
-        <details>
-          <summary><strong>2025-07-08</strong> – Labs 6.7–6.12 Completed</summary>
-          <p>Finished the last dictionary labs in the book, including nesting lists in dictionaries, and vice versa. Also practiced nesting dictionaries within dictionaries.</p>
-        </details>
-      </details>
-
-      <details>
-        <summary><strong>June</strong></summary>
-
-        <details>
-          <summary><strong>2025-06-25</strong> – Labs 6.4–6.6 Completed</summary>
-          <p>These labs built upon each other, each focusing on different dictionary scenarios. Lab 6.5 was a turning point where I wrote a full dictionary, and 6.6 reused that format with minor changes. Overall, these were straightforward and enjoyable.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-06-24</strong> – ComfyUI Setup</summary>
-          <p>Installed ComfyUI with the Wan 2.1 model. The process was manageable but time-consuming due to large file sizes. Ran into some rendering issues, but successfully generated my first image-to-video by 10:30 PM.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-06-23</strong> – Labs 6.1–6.3 Completed</summary>
-          <p>Explored dictionary creation and manipulation. These labs involved accessing values and using loops to output dictionary contents.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-06-10</strong> – Chapter 5 Completed</summary>
-          <p>Wrapped up Chapter 5. Realized I needed a refresh when struggling with an API in my weather app. Decided to work through the book from the start to build a stronger foundation.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-06-04</strong> – Reviewing Python Crash Course</summary>
-          <p>Began reviewing the first chapters after facing difficulty with an API in the weather app. Restarted with the basics to regain confidence.</p>
-        </details>
-      </details>
-
-      <details>
-        <summary><strong>May</strong></summary>
-
-        <details>
-          <summary><strong>2025-05-15</strong> – Started Weather Fetcher App</summary>
-          <p>Had a late start due to pet-sitting. Reinstalled IntelliJ on my new Linux Mint setup. Began the weather app project but hit roadblocks with API integration.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-05-14</strong> – Linked Project Pages</summary>
-          <p>Connected the new project pages to the main website. Realized too late that I named the file “projects” instead of “projects.html,” which caused unnecessary debugging.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-05-13</strong> – Created Journal and Projects Pages</summary>
-          <p>Started organizing the website with dedicated pages. Still adjusting to GitHub and brushing up on HTML fundamentals.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-05-13</strong> – Journal Layout Setup</summary>
-          <p>Set up a collapsible format for entries organized by year and month. Helps keep the journal tidy and navigable.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-05-12</strong> – Tkinter App Issue</summary>
-          <p>Tried launching a Tkinter window but forgot the parentheses and the <code>mainloop()</code> function. Simple mistake.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-05-10</strong> – Started Building Journal Website</summary>
-          <p>Learned basic HTML structure. Set up the first sections for About, Projects, and Journal.</p>
-        </details>
-
-        <details>
-          <summary><strong>2025-05-09</strong> – Returned to GitHub</summary>
-          <p>Reactivated my GitHub and created this site using GitHub Pages. Starting to explore web development again.</p>
-        </details>
-      </details>
-
-      <details>
-        <summary><strong>April</strong></summary>
-
-        <details>
-          <summary><strong>2025-04-28</strong> – GitHub Pages Setup</summary>
-          <p>Created my GitHub Pages site and practiced basic HTML/CSS to get it started.</p>
-        </details>
-      </details>
-    </details>
-  </main>
-</body>
-</html>
+  <details>
+    <summary><strong>2025-12-05</strong> – Endpoint, SIEM, and Identity Work</summary>
+    <p>
+      Continued CrowdStrike sensor validation, host group updates, and change requests.
+      Participated in SIEM planning discussions and Falcon Identity exploration.
+      Maintained daily ticket triage across ServiceNow and CrowdStrike.
+    </p>
+  </details>
+</details>
