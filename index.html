@@ -6,91 +6,172 @@
   <title>Ryan Scogna</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      background: #0f1115;
+      color: #e6e6e6;
     }
+
     header {
-      background: #1a1a1a;
-      color: white;
-      padding: 1rem 2rem;
+      background: #0b0d11;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid #222;
     }
+
     nav a {
-      color: #ccc;
-      margin-right: 1rem;
+      color: #9aa4b2;
+      margin-right: 1.5rem;
       text-decoration: none;
+      font-size: 0.95rem;
     }
+
     nav a:hover {
-      color: white;
+      color: #ffffff;
     }
+
     main {
-      padding: 2rem;
-      max-width: 800px;
+      padding: 3rem 2rem;
+      max-width: 900px;
       margin: auto;
     }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #222;
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #cfd6df;
+    }
+
     section {
       margin-bottom: 3rem;
     }
-    h1, h2 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
+
+    .tagline {
+      font-family: monospace;
+      color: #7dd3fc;
+      margin-bottom: 1.5rem;
     }
-    ul {
-      padding-left: 1.2rem;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: #151922;
+      border: 1px solid #222;
+      border-radius: 6px;
+      padding: 1.25rem;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+    }
+
+    .card a {
+      color: #7dd3fc;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #777;
+      border-top: 1px solid #222;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Ryan Scogna Roadmap</h1>
+    <h1>Ryan Scogna</h1>
+    <div class="tagline">learning • building • breaking • documenting</div>
     <nav>
-      <a href="#about.html">About</a>
-      <a href="#projects.html">Projects</a>
-      <a href="#Labs.html">Labs</a>
+      <a href="projects.html">Projects</a>
       <a href="development.html">Development</a>
-      <a href="#journal.html">Journal</a>
-      
+      <a href="journal.html">Journal</a>
     </nav>
   </header>
 
   <main>
-    <section id="about">
+
+    <section>
       <h2>About</h2>
-      <p>Hi, I'm Ryan Scogna. I'm currently learning Python, Linux, and Cybersecurity and documenting my journey here. This site is a personal space to track what I'm learning, what I'm building, and what I plan to explore next.</p>
+      <p>
+        This site documents my ongoing work across Python, Linux, systems,
+        and cybersecurity. It serves as both a technical journal and a
+        structured record of skills, experiments, and projects as I continue
+        building hands-on experience.
+      </p>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="https://github.com/yourusername/project1">Project 4: Todo App</a></li>
-        <li><a href="https://github.com/yourusername/project2">Project 5: Python Weather Fetcher</a></li>
-        <li><a href="https://github.com/yourusername/project3">Project 6: Markdown Blog Generator</a></li>
-      </ul>
-      <p><a href="projects.html">Explore all projects →</a></p>
+    <section>
+      <h2>Focus Areas</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Development</h3>
+          <p>
+            Python fundamentals, small tools, automation, and web basics.
+          </p>
+          <a href="development.html">View skill tree →</a>
+        </div>
+
+        <div class="card">
+          <h3>Systems & Labs</h3>
+          <p>
+            Virtualization, storage, self-hosted services, and experimentation.
+          </p>
+          <a href="projects.html">View projects →</a>
+        </div>
+
+        <div class="card">
+          <h3>Cybersecurity</h3>
+          <p>
+            Recon, scanning, vulnerability assessment, and core security concepts.
+          </p>
+          <a href="development.html#security">See progress →</a>
+        </div>
+
+        <div class="card">
+          <h3>Journal</h3>
+          <p>
+            Chronological notes, experiments, and technical milestones.
+          </p>
+          <a href="journal.html">Read journal →</a>
+        </div>
+      </div>
     </section>
 
-    <section id="completed-projects">
-      <h2>Completed Projects</h2>
-      <ul>
-        <li><a href="https://github.com/yourusername/project1">Project 1: TrueNAS</a></li>
-        <li><a href="https://github.com/yourusername/project2">Project 2: Proxmox</a></li>
-        <li><a href="https://github.com/yourusername/project3">Project 3: Xubuntu + Chicago95 & Zorin OS Theme</a></li>
-        <li><a href="https://github.com/yourusername/project4">Project 4: ComfyUI + Wan 2.1 Setup</a></li>
-      </ul>
-    </section>
+  </main>
 
-    <section id="journal">
-      <h2>Journal</h2>
-      <ul>
-        <li><strong>2025-05-09</strong> – Set up GitHub Pages and created this site.</li>
-        <li><strong>2025-05-10</strong> – Learned basic HTML structure and created sections for About, Projects, and Journal.</li>
-        <li><strong>2025-05-13</strong> – Set up Journal and Projects pages for website.</li>
-        <li><strong>2025-05-14</strong> – Linked newly made web pages to website and updated all entries.</li>
-        <li><strong>2025-05-15</strong> – Started Weather Fetcher app (Python), reviewing API calls.</li>
-        <li><strong>2025-06-05</strong> – Returned to Python Crash Course (Chapter 5).</li>
-        <li><strong>2025-06-10</strong> – Completed all labs in Chapter 5.</li>
-        <li><strong>2025-06-19</strong> – Learning Dictionaries (Chapter 6).</li>
-        <li><strong>2025-06-22</strong> – Working on Dictionary Labs for Chapter 6.</li>
-        <li><strong>2025-06-24</strong> – Installed and used
+  <footer>
+    © Ryan Scogna — Built with static HTML & curiosity
+  </footer>
+
+</body>
+</html>
