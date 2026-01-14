@@ -4,91 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ryan Scogna</title>
+
   <style>
+    :root {
+      --bg-main: #0d1117;
+      --bg-card: #161b22;
+      --border-subtle: #30363d;
+      --text-main: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
-      padding: 0;
-      background: #0f1115;
-      color: #e6e6e6;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
     }
 
     header {
-      background: #0b0d11;
-      padding: 1.5rem 2rem;
-      border-bottom: 1px solid #222;
+      padding: 2rem 3rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    header .tagline {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    nav {
+      margin-top: 1rem;
     }
 
     nav a {
-      color: #9aa4b2;
+      color: var(--text-muted);
       margin-right: 1.5rem;
       text-decoration: none;
       font-size: 0.95rem;
     }
 
     nav a:hover {
-      color: #ffffff;
+      color: var(--text-main);
     }
 
     main {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #222;
-      padding-bottom: 0.3rem;
-    }
-
-    p {
-      line-height: 1.6;
-      color: #cfd6df;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem;
     }
 
     section {
       margin-bottom: 3rem;
     }
 
-    .tagline {
-      font-family: monospace;
-      color: #7dd3fc;
-      margin-bottom: 1.5rem;
+    h2 {
+      font-size: 1.3rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
     }
 
-    .grid {
+    .focus-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
-      margin-top: 1.5rem;
     }
 
     .card {
-      background: #151922;
-      border: 1px solid #222;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
       border-radius: 6px;
-      padding: 1.25rem;
+      padding: 1.5rem;
     }
 
     .card h3 {
       margin-top: 0;
-      font-size: 1.05rem;
-      color: #ffffff;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
 
     .card p {
-      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
     }
 
     .card a {
-      color: #7dd3fc;
+      display: inline-block;
+      margin-top: 0.75rem;
+      color: var(--accent);
       text-decoration: none;
       font-size: 0.9rem;
     }
@@ -100,78 +115,72 @@
     footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.8rem;
-      color: #777;
-      border-top: 1px solid #222;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-subtle);
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Ryan Scogna</h1>
-    <div class="tagline">learning • building • breaking • documenting</div>
-    <nav>
-      <a href="projects.html">Projects</a>
-      <a href="development.html">Development</a>
-      <a href="journal.html">Journal</a>
-    </nav>
-  </header>
+<header>
+  <h1>Ryan Scogna</h1>
+  <div class="tagline">learning • building • breaking • documenting</div>
 
-  <main>
+  <nav>
+    <a href="projects.html">Projects</a>
+    <a href="development.html">Development</a>
+    <a href="journal.html">Journal</a>
+  </nav>
+</header>
 
-    <section>
-      <h2>About</h2>
-      <p>
-        This site documents my ongoing work across Python, Linux, systems,
-        and cybersecurity. It serves as both a technical journal and a
-        structured record of skills, experiments, and projects as I continue
-        building hands-on experience.
-      </p>
-    </section>
+<main>
 
-    <section>
-      <h2>Focus Areas</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Development</h3>
-          <p>
-            Python fundamentals, small tools, automation, and web basics.
-          </p>
-          <a href="development.html">View skill tree →</a>
-        </div>
+  <section>
+    <h2>About</h2>
+    <p>
+      This site documents my ongoing work across Python, Linux, systems, and cybersecurity.
+      It serves as both a technical journal and a structured record of skills, experiments,
+      and projects as I continue building hands-on experience.
+    </p>
+  </section>
 
-        <div class="card">
-          <h3>Systems & Labs</h3>
-          <p>
-            Virtualization, storage, self-hosted services, and experimentation.
-          </p>
-          <a href="projects.html">View projects →</a>
-        </div>
+  <section>
+    <h2>Focus Areas</h2>
 
-        <div class="card">
-          <h3>Cybersecurity</h3>
-          <p>
-            Recon, scanning, vulnerability assessment, and core security concepts.
-          </p>
-          <a href="development.html#security">See progress →</a>
-        </div>
-
-        <div class="card">
-          <h3>Journal</h3>
-          <p>
-            Chronological notes, experiments, and technical milestones.
-          </p>
-          <a href="journal.html">Read journal →</a>
-        </div>
+    <div class="focus-grid">
+      <div class="card">
+        <h3>Development</h3>
+        <p>Python fundamentals, automation, small tools, APIs, and web basics.</p>
+        <a href="development.html">View skill tree →</a>
       </div>
-    </section>
 
-  </main>
+      <div class="card">
+        <h3>Systems & Labs</h3>
+        <p>Virtualization, storage, self-hosted services, and experimentation.</p>
+        <a href="projects.html">View projects →</a>
+      </div>
 
-  <footer>
-    © Ryan Scogna — Built with static HTML & curiosity
-  </footer>
+      <div class="card">
+        <h3>Cybersecurity</h3>
+        <p>Recon, scanning, vulnerability assessment, SIEM, and security operations.</p>
+        <a href="development.html">See progress →</a>
+      </div>
+
+      <div class="card">
+        <h3>Journal</h3>
+        <p>Chronological notes, experiments, and technical milestones.</p>
+        <a href="journal.html">Read journal →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © Ryan Scogna • Built with HTML & curiosity
+</footer>
 
 </body>
 </html>
