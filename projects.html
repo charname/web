@@ -4,141 +4,204 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects – Ryan Scogna</title>
+
   <style>
+    :root {
+      --bg-main: #0d1117;
+      --bg-card: #161b22;
+      --border-subtle: #30363d;
+      --text-main: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
     }
+
     header {
-      background: #1a1a1a;
-      color: white;
-      padding: 1rem 2rem;
+      padding: 2rem 3rem;
+      border-bottom: 1px solid var(--border-subtle);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 0.75rem;
+    }
+
     nav a {
-      color: #ccc;
-      margin-right: 1rem;
+      color: var(--text-muted);
+      margin-right: 1.5rem;
       text-decoration: none;
+      font-size: 0.95rem;
     }
+
     nav a:hover {
-      color: white;
+      color: var(--text-main);
     }
+
     main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem;
     }
+
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
-    h1, h2 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
+
+    h2 {
+      font-size: 1.3rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.25rem;
     }
+
     ul {
-      padding-left: 1.2rem;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    li {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    li::before {
+      content: "▸";
+      color: var(--accent);
+      margin-right: 0.5rem;
+    }
+
+    code {
+      background: #0b0f14;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--accent);
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>My Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="journal.html">Journal</a>
-    </nav>
-  </header>
 
-  <main>
+<header>
+  <h1>My Projects</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="journal.html">Journal</a>
+  </nav>
+</header>
 
-    <section>
-      <h2>Security & Infrastructure Projects</h2>
-      <ul>
-        <li>
-          <strong>KnowBe4 Phishing Automation Framework</strong> –  
-          Designed and implemented a repeatable phishing campaign architecture using smart groups,
-          tiered difficulty (Beginner → Advanced), and quarterly scheduling logic.
-          Built a Mermaid flowchart to document automation, cadence, and reporting workflow.
-        </li>
+<main>
 
-        <li>
-          <strong>Cofense → KnowBe4 Platform Migration</strong> –  
-          Led transition from Cofense to KnowBe4 for phishing simulations and awareness training.
-          Migrated users from Entra ID, configured SCIM provisioning, SSO/SAML, admin MFA,
-          deployed the new Phish Alert Button, and validated campaign parity.
-        </li>
+<section>
+  <h2>Security & Infrastructure Projects</h2>
+  <ul>
+    <li>
+      <strong>KnowBe4 Phishing Automation Framework</strong> –  
+      Designed a repeatable phishing campaign architecture using smart groups,
+      tiered difficulty (Beginner → Advanced), and quarterly scheduling logic.
+      Documented automation, cadence, and reporting via Mermaid flowcharts.
+    </li>
 
-        <li>
-          <strong>Abnormal Security Email Defense Deployment</strong> –  
-          Assisted in rollout of Abnormal Security as the primary email security platform while
-          phasing out Proofpoint. Validated baseline configuration, supported user readiness,
-          and completed Abnormal Academy training for detection logic and workflows.
-        </li>
+    <li>
+      <strong>Cofense → KnowBe4 Platform Migration</strong> –  
+      Led transition from Cofense to KnowBe4 for phishing simulations and training.
+      Migrated users from Entra ID, configured SCIM provisioning, SSO/SAML, admin MFA,
+      deployed the Phish Alert Button, and validated campaign parity.
+    </li>
 
-        <li>
-          <strong>CrowdStrike Sensor & Endpoint Validation</strong> –  
-          Supported Falcon sensor updates, host group changes, and policy validation.
-          Coordinated ServiceNow change requests, verified sensor health,
-          and assisted with pre-production and post-deployment checks.
-        </li>
+    <li>
+      <strong>Abnormal Security Email Defense Deployment</strong> –  
+      Assisted in rollout of Abnormal Security as the primary email security platform
+      while phasing out Proofpoint. Completed Abnormal Academy training and supported
+      detection logic validation and user readiness.
+    </li>
 
-        <li>
-          <strong>Next-Gen SIEM Evaluation (CrowdStrike)</strong> –  
-          Participated in planning and evaluation of Falcon Next-Gen SIEM.
-          Reviewed ingestion models, LogScale search, Charlotte AI, SOAR workflows,
-          and identity/endpoint telemetry integration.
-        </li>
-      </ul>
-    </section>
+    <li>
+      <strong>CrowdStrike Sensor & Endpoint Validation</strong> –  
+      Supported Falcon sensor updates, host group changes, and policy validation.
+      Coordinated ServiceNow changes, verified sensor health,
+      and assisted with pre- and post-deployment checks.
+    </li>
 
-    <section>
-      <h2>Automation & Development Projects</h2>
-      <ul>
-        <li>
-          <strong>Internal API Mini-Project</strong> –  
-          Designed and tested a small internal API for automation learning.
-          Implemented authentication, data retrieval, JSON parsing,
-          and error handling using Python.
-        </li>
+    <li>
+      <strong>Next-Gen SIEM Evaluation (CrowdStrike)</strong> –  
+      Participated in planning and evaluation of Falcon Next-Gen SIEM.
+      Reviewed ingestion models, LogScale search, Charlotte AI,
+      SOAR workflows, and identity/endpoint telemetry integration.
+    </li>
+  </ul>
+</section>
 
-        <li>
-          <strong>Security Data Automation Scripts</strong> –  
-          Built PowerShell and Python scripts to process asset exports,
-          generate Excel reports, and create pivot-based remediation tracking
-          for vulnerability and endpoint investigations.
-        </li>
-      </ul>
-    </section>
+<section>
+  <h2>Automation & Development Projects</h2>
+  <ul>
+    <li>
+      <strong>Internal API Mini-Project</strong> –  
+      Designed and tested a small internal API to support automation learning.
+      Implemented authentication, data retrieval, JSON parsing,
+      and structured error handling using Python.
+    </li>
 
-    <section>
-      <h2>Lab & Infrastructure Projects</h2>
-      <ul>
-        <li>
-          <strong>Security Lab Environment</strong> –  
-          Built a dedicated VM lab using VirtualBox and Proxmox with
-          multiple Windows, Linux, and Kali systems.
-          Used for API testing, CVE reproduction, and sensor evaluation.
-        </li>
+    <li>
+      <strong>Security Data Automation Scripts</strong> –  
+      Built PowerShell and Python scripts to process asset exports,
+      generate Excel reports, and create pivot-based remediation tracking
+      for vulnerability and endpoint investigations.
+    </li>
+  </ul>
+</section>
 
-        <li>
-          <strong>TrueNAS SCALE & Container Experiments</strong> –  
-          Migrated from TrueNAS Core to SCALE to support Docker workloads.
-          Tested Immich deployment, dataset tuning, and container behavior.
-        </li>
-      </ul>
-    </section>
+<section>
+  <h2>Lab & Infrastructure Projects</h2>
+  <ul>
+    <li>
+      <strong>Security Lab Environment</strong> –  
+      Built a multi-VM lab using VirtualBox and Proxmox with
+      Windows, Linux, and Kali systems.
+      Used for API testing, CVE reproduction, and sensor evaluation.
+    </li>
 
-    <section>
-      <h2>Personal & Learning Projects</h2>
-      <ul>
-        <li><strong>Weather Fetcher</strong> – CLI Python app consuming a public weather API.</li>
-        <li><strong>Markdown Blog Generator</strong> – Converts Markdown files into static HTML.</li>
-        <li><strong>Python Fundamentals Labs</strong> – Exercises from Python Crash Course.</li>
-      </ul>
-    </section>
+    <li>
+      <strong>TrueNAS SCALE & Container Experiments</strong> –  
+      Migrated from TrueNAS Core to SCALE to support Docker workloads.
+      Tested Immich deployment, dataset tuning, and container behavior.
+    </li>
+  </ul>
+</section>
 
-  </main>
+<section>
+  <h2>Personal & Learning Projects</h2>
+  <ul>
+    <li><strong>Weather Fetcher</strong> – CLI Python app consuming a public weather API.</li>
+    <li><strong>Markdown Blog Generator</strong> – Converts Markdown files into static HTML.</li>
+    <li><strong>Python Fundamentals Labs</strong> – Exercises from Python Crash Course.</li>
+  </ul>
+</section>
+
+</main>
 </body>
 </html>
