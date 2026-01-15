@@ -4,173 +4,245 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Development – Ryan Scogna</title>
+
   <style>
+    :root {
+      --bg-main: #0d1117;
+      --bg-card: #161b22;
+      --border-subtle: #30363d;
+      --text-main: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
     }
+
     header {
-      background: #1a1a1a;
-      color: white;
-      padding: 1rem 2rem;
+      padding: 2rem 3rem;
+      border-bottom: 1px solid var(--border-subtle);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 0.75rem;
+    }
+
     nav a {
-      color: #ccc;
-      margin-right: 1rem;
+      color: var(--text-muted);
+      margin-right: 1.5rem;
       text-decoration: none;
+      font-size: 0.95rem;
     }
+
     nav a:hover {
-      color: white;
+      color: var(--text-main);
     }
+
     main {
-      padding: 2rem;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
+      padding: 3rem;
     }
-    h1, h2, h3 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
-    details {
+
+    h2 {
+      font-size: 1.4rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.4rem;
       margin-bottom: 1rem;
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      border-radius: 5px;
     }
+
+    p {
+      color: var(--text-muted);
+      max-width: 80ch;
+    }
+
+    details {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+
     summary {
-      font-weight: bold;
       cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-main);
     }
+
+    summary::marker {
+      color: var(--accent);
+    }
+
+    details[open] summary {
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.25rem;
+    }
+
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.25rem;
+      margin: 0.5rem 0;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    code {
+      background: #0b0f14;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--accent);
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Ryan Scogna – Development</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="journal.html">Journal</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Skill Development</h2>
-    <p>
-      This page tracks my technical skill growth across development, systems,
-      and cybersecurity. Items represent capabilities learned and applied,
-      organized roughly from foundational to more advanced.
-    </p>
+<header>
+  <h1>Ryan Scogna – Development</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="journal.html">Journal</a>
+  </nav>
+</header>
 
-    <details open>
-      <summary>🌐 Web & Publishing Fundamentals</summary>
+<main>
+
+<h2>Skill Development</h2>
+<p>
+This page tracks technical capability growth across development, systems,
+and cybersecurity. Entries reflect hands-on learning and applied experience,
+organized from foundational concepts to more advanced work.
+</p>
+
+<details open>
+  <summary>🌐 Web & Publishing Fundamentals</summary>
+  <ul>
+    <li>Built and published a static site using GitHub Pages.</li>
+    <li>Implemented HTML and CSS for layout, navigation, and styling.</li>
+    <li>Structured multi-page navigation (<code>index</code>, <code>projects</code>, <code>journal</code>).</li>
+    <li>Used semantic elements and collapsible sections (<code>&lt;details&gt;</code>, <code>&lt;summary&gt;</code>).</li>
+    <li>Debugged linking, layout, and site structure issues.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🐍 Python Programming</summary>
+  <ul>
+    <li>Applied core Python concepts: variables, conditionals, loops, and functions.</li>
+    <li>Worked with lists, dictionaries, and nested data structures.</li>
+    <li>Implemented control flow using <code>while</code> loops and input validation.</li>
+    <li>Built small functional projects:
       <ul>
-        <li>Built and published a static site using GitHub Pages.</li>
-        <li>Implemented basic HTML and CSS for layout, navigation, and styling.</li>
-        <li>Structured multi-page navigation (<code>index</code>, <code>projects</code>, <code>journal</code>).</li>
-        <li>Used semantic elements and collapsible sections (<code>&lt;details&gt;</code>, <code>&lt;summary&gt;</code>).</li>
-        <li>Debugged linking, layout issues, and site structure.</li>
+        <li>Tkinter-based GUI application.</li>
+        <li>API-driven weather data fetcher.</li>
       </ul>
-    </details>
+    </li>
+    <li>Configured and used IntelliJ IDEA for Python development.</li>
+  </ul>
+</details>
 
-    <details>
-      <summary>🐍 Python Programming</summary>
+<details>
+  <summary>💾 Systems, Storage & Virtualization</summary>
+  <ul>
+    <li>Deployed and managed TrueNAS Core, later migrating to TrueNAS SCALE.</li>
+    <li>Configured datasets, permissions, and storage layouts.</li>
+    <li>Used Docker on SCALE for application testing.</li>
+    <li>Deployed and troubleshot Immich photo server:
       <ul>
-        <li>Applied core Python concepts: variables, conditionals, loops, and functions.</li>
-        <li>Worked with lists, dictionaries, and nested data structures.</li>
-        <li>Implemented control flow using <code>while</code> loops and input validation.</li>
-        <li>Built small functional projects:
-          <ul>
-            <li>Tkinter-based GUI application.</li>
-            <li>API-driven weather data fetcher.</li>
-          </ul>
-        </li>
-        <li>Configured and used IntelliJ IDEA for Python development.</li>
+        <li>Resolved dataset type and permission issues.</li>
+        <li>Performed CLI-based bulk uploads with duplicate handling.</li>
+        <li>Reviewed retry and verification workflows.</li>
       </ul>
-    </details>
+    </li>
+    <li>Explored HTTPS and encryption considerations for self-hosted services.</li>
+  </ul>
+</details>
 
-    <details>
-      <summary>💾 Systems, Storage & Virtualization</summary>
+<details>
+  <summary>🎨 AI & Creative Tooling</summary>
+  <ul>
+    <li>Installed and configured ComfyUI with custom models.</li>
+    <li>Executed image-to-video generation workflows.</li>
+    <li>Learned model storage, performance constraints, and GPU workload impact.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🛡️ Cybersecurity & Networking</summary>
+
+  <h3>Reconnaissance & OSINT</h3>
+  <ul>
+    <li>Studied threat categories including APTs, botnets, cloud risks, and insider threats.</li>
+    <li>Performed passive reconnaissance using search operators and Google dorking.</li>
+    <li>Extracted metadata using Metagoofil.</li>
+    <li>Analyzed email headers using multiple tools.</li>
+    <li>Queried WHOIS, DNS, and IP data via CLI utilities.</li>
+  </ul>
+
+  <h3>Network Discovery & Scanning</h3>
+  <ul>
+    <li>Learned DNS record types and their operational purpose.</li>
+    <li>Used Nmap for discovery, service detection, and OS fingerprinting.</li>
+    <li>Applied common scan flags and scripting engine usage.</li>
+    <li>Understood TCP behavior, firewall detection, and scan evasion concepts.</li>
+  </ul>
+
+  <h3>Vulnerability Assessment</h3>
+  <ul>
+    <li>Installed and configured Nessus for vulnerability scanning.</li>
+    <li>Ran credentialed and non-credentialed scans.</li>
+    <li>Interpreted CVSS severity, findings, and remediation guidance.</li>
+    <li>Applied ethical scanning principles including scope and rate control.</li>
+  </ul>
+
+  <h3>Network Mapping</h3>
+  <ul>
+    <li>Used SolarWinds Network Topology Mapper for environment visualization.</li>
+    <li>Performed SNMP and WMI-based discovery.</li>
+    <li>Exported and compared network maps over time.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🔒 Security Fundamentals</summary>
+  <ul>
+    <li>Understood the five phases of the attack lifecycle.</li>
+    <li>Reviewed OSI and TCP/IP models and traffic flow.</li>
+    <li>Studied common attack techniques:
       <ul>
-        <li>Deployed and managed TrueNAS Core, later migrating to TrueNAS SCALE.</li>
-        <li>Configured datasets, permissions, and storage layouts.</li>
-        <li>Used Docker on SCALE for application testing.</li>
-        <li>Deployed and troubleshot Immich photo server:
-          <ul>
-            <li>Resolved dataset type and permission issues.</li>
-            <li>Performed CLI-based bulk uploads with duplicate handling.</li>
-            <li>Reviewed retry and verification workflows.</li>
-          </ul>
-        </li>
-        <li>Explored HTTPS and encryption considerations for self-hosted services.</li>
+        <li>XSS, SQL Injection, MITM, DoS, Buffer Overflow.</li>
       </ul>
-    </details>
+    </li>
+    <li>Learned ethical and legal boundaries of security testing.</li>
+  </ul>
+</details>
 
-    <details>
-      <summary>🎨 AI & Creative Tooling</summary>
-      <ul>
-        <li>Installed and configured ComfyUI with custom models.</li>
-        <li>Executed image-to-video generation workflows.</li>
-        <li>Learned model storage, performance constraints, and GPU workload impact.</li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>🛡️ Cybersecurity & Networking</summary>
-
-      <h3>Reconnaissance & OSINT</h3>
-      <ul>
-        <li>Studied threat categories including APTs, botnets, cloud risks, and insider threats.</li>
-        <li>Performed passive reconnaissance using search operators and Google dorking.</li>
-        <li>Extracted metadata using Metagoofil.</li>
-        <li>Analyzed email headers using multiple tools.</li>
-        <li>Queried WHOIS, DNS, and IP data using CLI utilities.</li>
-      </ul>
-
-      <h3>Network Discovery & Scanning</h3>
-      <ul>
-        <li>Learned DNS record types and their operational purpose.</li>
-        <li>Used Nmap for discovery, service detection, and OS fingerprinting.</li>
-        <li>Applied common scan flags and scripting engine usage.</li>
-        <li>Understood TCP behavior, resets, firewall detection, and scan evasion concepts.</li>
-      </ul>
-
-      <h3>Vulnerability Assessment</h3>
-      <ul>
-        <li>Installed and configured Nessus for vulnerability scanning.</li>
-        <li>Ran credentialed and non-credentialed scans.</li>
-        <li>Interpreted CVSS severity, findings, and remediation guidance.</li>
-        <li>Applied ethical scanning principles including scope and rate control.</li>
-      </ul>
-
-      <h3>Network Mapping</h3>
-      <ul>
-        <li>Used SolarWinds Network Topology Mapper to visualize environments.</li>
-        <li>Performed SNMP and WMI-based discovery.</li>
-        <li>Exported and compared network maps over time.</li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>🔒 Security Fundamentals</summary>
-      <ul>
-        <li>Understood the five phases of attack lifecycle.</li>
-        <li>Reviewed OSI and TCP/IP models and traffic flow.</li>
-        <li>Studied common attack techniques:
-          <ul>
-            <li>XSS, SQL Injection, MITM, DoS, Buffer Overflow.</li>
-          </ul>
-        </li>
-        <li>Learned ethical and legal boundaries of security testing.</li>
-      </ul>
-    </details>
-
-  </main>
+</main>
 </body>
 </html>
