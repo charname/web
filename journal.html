@@ -4,54 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Journal – Ryan Scogna</title>
+
   <style>
+    :root {
+      --bg-main: #0d1117;
+      --bg-card: #161b22;
+      --border-subtle: #30363d;
+      --text-main: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
     }
+
     header {
-      background: #1a1a1a;
-      color: white;
-      padding: 1rem 2rem;
+      padding: 2rem 3rem;
+      border-bottom: 1px solid var(--border-subtle);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 0.75rem;
+    }
+
     nav a {
-      color: #ccc;
-      margin-right: 1rem;
+      color: var(--text-muted);
+      margin-right: 1.5rem;
       text-decoration: none;
+      font-size: 0.95rem;
     }
+
     nav a:hover {
-      color: white;
+      color: var(--text-main);
     }
+
     main {
-      padding: 2rem;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
+      padding: 3rem;
     }
-    h1, h2 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
+
+    h2 {
+      font-size: 1.3rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
     }
+
+    p {
+      color: var(--text-main);
+    }
+
     details {
       margin-bottom: 1rem;
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      border-radius: 5px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
     }
+
+    details details {
+      margin-top: 0.75rem;
+    }
+
     summary {
-      font-weight: bold;
       cursor: pointer;
+      font-weight: 600;
+      color: var(--text-main);
+      list-style: none;
     }
-    p {
-      line-height: 1.6;
+
+    summary::marker {
+      display: none;
+    }
+
+    summary:hover {
+      color: var(--accent);
+    }
+
+    code {
+      background: #0b0f14;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    em {
+      color: var(--text-muted);
     }
   </style>
 </head>
 
 <body>
+
 <header>
   <h1>Ryan Scogna – Journal</h1>
   <nav>
@@ -62,6 +123,7 @@
 </header>
 
 <main>
+
 <h2>Technical Journal</h2>
 <p>
 Chronological notes capturing learning, experimentation, troubleshooting,
@@ -85,8 +147,7 @@ of <em>App</em>. Recreating the datasets with proper types resolved startup issu
 <p>
 Discovered Immich’s CLI-based recursive upload method via SSH. This approach
 automatically detects duplicates, skips already-processed files, and clearly
-reports failed uploads with full file paths. This significantly reduced rework
-and improved visibility during ingestion.
+reports failed uploads with full file paths.
 </p>
 <p>
 Marked the Immich setup as a successful trial. HTTPS, encryption, and advanced
@@ -97,29 +158,23 @@ features remain unexplored for now.
 <details>
 <summary><strong>2025-07-24</strong> — TrueNAS Core to SCALE Migration</summary>
 <p>
-Upgraded from TrueNAS Core to SCALE to support native Docker workloads.
-The in-place upgrade path failed due to version constraints, requiring a
-clean SCALE install and configuration import.
-</p>
-<p>
-Although more time-consuming than expected, the migration provided a cleaner
-foundation for containerized applications like Immich.
+Migrated from TrueNAS Core to SCALE to enable native Docker workloads.
+The upgrade required a clean install due to version constraints.
 </p>
 </details>
 
 <details>
 <summary><strong>2025-07-09</strong> — Python Crash Course, Chapter 6 Complete</summary>
 <p>
-Completed Chapter 6 with focus on dictionaries and nested data structures.
-Prepared to move into loop-heavy control flow in Chapter 7.
+Completed dictionary-focused chapter and prepared to move into
+loop-driven control flow.
 </p>
 </details>
 
 <details>
 <summary><strong>2025-07-08</strong> — Dictionary Labs 6.7–6.12</summary>
 <p>
-Finished advanced dictionary labs involving nested lists and dictionaries.
-Solidified understanding of complex data traversal.
+Worked through nested list/dictionary structures and complex traversal patterns.
 </p>
 </details>
 </details>
@@ -131,40 +186,35 @@ Solidified understanding of complex data traversal.
 <details>
 <summary><strong>2025-06-25</strong> — Dictionary Labs 6.4–6.6</summary>
 <p>
-Worked through progressively structured dictionary exercises.
-Focused on reuse and modification of consistent data formats.
+Focused on structured reuse of consistent dictionary formats.
 </p>
 </details>
 
 <details>
 <summary><strong>2025-06-24</strong> — ComfyUI Setup</summary>
 <p>
-Installed ComfyUI with the Wan 2.1 model. Initial setup was time-intensive due
-to large model files. Generated first image-to-video output after resolving
-rendering issues.
+Installed ComfyUI with Wan 2.1 model and generated first image-to-video output.
 </p>
 </details>
 
 <details>
 <summary><strong>2025-06-23</strong> — Dictionary Labs 6.1–6.3</summary>
 <p>
-Practiced dictionary creation, access patterns, and iteration using loops.
+Practiced dictionary creation, access, and iteration patterns.
 </p>
 </details>
 
 <details>
 <summary><strong>2025-06-10</strong> — Chapter 5 Completed</summary>
 <p>
-Completed conditional logic chapter. Identified gaps when working with APIs
-and decided to reinforce fundamentals before continuing.
+Completed conditional logic chapter and identified gaps around API usage.
 </p>
 </details>
 
 <details>
 <summary><strong>2025-06-04</strong> — Python Fundamentals Review</summary>
 <p>
-Restarted Python Crash Course from earlier chapters to strengthen core concepts
-after API-related friction.
+Restarted earlier chapters to reinforce foundational concepts.
 </p>
 </details>
 </details>
@@ -176,24 +226,21 @@ after API-related friction.
 <details>
 <summary><strong>2025-05-15</strong> — Weather Fetcher Project Started</summary>
 <p>
-Reinstalled IntelliJ on Linux Mint and began CLI-based weather application.
-Encountered early API integration challenges.
+Began CLI-based weather app; encountered early API integration challenges.
 </p>
 </details>
 
 <details>
 <summary><strong>2025-05-14</strong> — Website Linking Debug</summary>
 <p>
-Resolved broken navigation caused by missing <code>.html</code> filename.
-Reinforced importance of consistent naming.
+Resolved broken navigation caused by missing <code>.html</code> filenames.
 </p>
 </details>
 
 <details>
 <summary><strong>2025-05-13</strong> — Journal & Projects Pages Created</summary>
 <p>
-Separated journal and project content into dedicated pages.
-Introduced collapsible layout using <code>&lt;details&gt;</code>.
+Separated content into dedicated pages and introduced collapsible layout.
 </p>
 </details>
 
@@ -214,7 +261,7 @@ Learned basic HTML structure and initial site layout.
 <details>
 <summary><strong>2025-05-09</strong> — GitHub Pages Setup</summary>
 <p>
-Reactivated GitHub and deployed static site via GitHub Pages.
+Deployed static site via GitHub Pages.
 </p>
 </details>
 </details>
@@ -226,7 +273,7 @@ Reactivated GitHub and deployed static site via GitHub Pages.
 <details>
 <summary><strong>2025-04-28</strong> — Initial GitHub Pages Work</summary>
 <p>
-Created GitHub Pages site and practiced foundational HTML/CSS.
+Practiced foundational HTML and CSS.
 </p>
 </details>
 </details>
