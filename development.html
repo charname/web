@@ -15,16 +15,14 @@
       --accent: #58a6ff;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background-color: var(--bg-main);
       color: var(--text-main);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     header {
@@ -54,7 +52,7 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 880px;
       margin: 0 auto;
       padding: 3rem;
     }
@@ -68,7 +66,8 @@
 
     p {
       color: var(--text-muted);
-      max-width: 80ch;
+      max-width: 75ch;
+      margin-bottom: 2rem;
     }
 
     details {
@@ -94,20 +93,13 @@
       margin-bottom: 0.75rem;
     }
 
-    h3 {
-      font-size: 1.05rem;
-      margin-top: 1rem;
-      border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 0.25rem;
-    }
-
     ul {
       padding-left: 1.25rem;
       margin: 0.5rem 0;
     }
 
     li {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.45rem;
     }
 
     code {
@@ -135,52 +127,38 @@
 
 <h2>Skill Development</h2>
 <p>
-This page tracks technical capability growth across development, systems,
-and cybersecurity. Entries reflect hands-on learning and applied experience,
-organized from foundational concepts to more advanced work.
+This page highlights hands-on development, systems, and security capabilities.
+The focus is on applied learning, experimentation, and building practical tools —
+not certifications or coursework.
 </p>
 
 <details open>
-  <summary>🌐 Web & Publishing Fundamentals</summary>
+  <summary>🌐 Web & Publishing</summary>
   <ul>
-    <li>Built and published a static site using GitHub Pages.</li>
-    <li>Implemented HTML and CSS for layout, navigation, and styling.</li>
-    <li>Structured multi-page navigation (<code>index</code>, <code>projects</code>, <code>journal</code>).</li>
-    <li>Used semantic elements and collapsible sections (<code>&lt;details&gt;</code>, <code>&lt;summary&gt;</code>).</li>
-    <li>Debugged linking, layout, and site structure issues.</li>
+    <li>Built and published a static website using GitHub Pages.</li>
+    <li>Implemented HTML and CSS for layout, navigation, and responsive styling.</li>
+    <li>Structured multi-page navigation and internal linking.</li>
+    <li>Used semantic elements and collapsible sections for clarity.</li>
   </ul>
 </details>
 
 <details>
-  <summary>🐍 Python Programming</summary>
+  <summary>🐍 Python & Automation</summary>
   <ul>
-    <li>Applied core Python concepts: variables, conditionals, loops, and functions.</li>
-    <li>Worked with lists, dictionaries, and nested data structures.</li>
-    <li>Implemented control flow using <code>while</code> loops and input validation.</li>
-    <li>Built small functional projects:
-      <ul>
-        <li>Tkinter-based GUI application.</li>
-        <li>API-driven weather data fetcher.</li>
-      </ul>
-    </li>
-    <li>Configured and used IntelliJ IDEA for Python development.</li>
+    <li>Worked with core Python constructs: functions, control flow, and data structures.</li>
+    <li>Built small functional tools and scripts for automation and data handling.</li>
+    <li>Created a desktop GUI application using Tkinter.</li>
+    <li>Explored API interaction and structured data processing.</li>
   </ul>
 </details>
 
 <details>
-  <summary>💾 Systems, Storage & Virtualization</summary>
+  <summary>💾 Systems & Virtualization</summary>
   <ul>
-    <li>Deployed and managed TrueNAS Core, later migrating to TrueNAS SCALE.</li>
+    <li>Deployed and administered TrueNAS (Core and SCALE).</li>
     <li>Configured datasets, permissions, and storage layouts.</li>
-    <li>Used Docker on SCALE for application testing.</li>
-    <li>Deployed and troubleshot Immich photo server:
-      <ul>
-        <li>Resolved dataset type and permission issues.</li>
-        <li>Performed CLI-based bulk uploads with duplicate handling.</li>
-        <li>Reviewed retry and verification workflows.</li>
-      </ul>
-    </li>
-    <li>Explored HTTPS and encryption considerations for self-hosted services.</li>
+    <li>Used Docker for controlled application testing.</li>
+    <li>Built virtual lab environments for experimentation and validation.</li>
   </ul>
 </details>
 
@@ -188,58 +166,28 @@ organized from foundational concepts to more advanced work.
   <summary>🎨 AI & Creative Tooling</summary>
   <ul>
     <li>Installed and configured ComfyUI with custom models.</li>
-    <li>Executed image-to-video generation workflows.</li>
-    <li>Learned model storage, performance constraints, and GPU workload impact.</li>
+    <li>Experimented with image and video generation workflows.</li>
+    <li>Evaluated performance, storage, and GPU resource constraints.</li>
   </ul>
 </details>
 
 <details>
   <summary>🛡️ Cybersecurity & Networking</summary>
-
-  <h3>Reconnaissance & OSINT</h3>
   <ul>
-    <li>Studied threat categories including APTs, botnets, cloud risks, and insider threats.</li>
-    <li>Performed passive reconnaissance using search operators and Google dorking.</li>
-    <li>Extracted metadata using Metagoofil.</li>
-    <li>Analyzed email headers using multiple tools.</li>
-    <li>Queried WHOIS, DNS, and IP data via CLI utilities.</li>
-  </ul>
-
-  <h3>Network Discovery & Scanning</h3>
-  <ul>
-    <li>Learned DNS record types and their operational purpose.</li>
-    <li>Used Nmap for discovery, service detection, and OS fingerprinting.</li>
-    <li>Applied common scan flags and scripting engine usage.</li>
-    <li>Understood TCP behavior, firewall detection, and scan evasion concepts.</li>
-  </ul>
-
-  <h3>Vulnerability Assessment</h3>
-  <ul>
-    <li>Installed and configured Nessus for vulnerability scanning.</li>
-    <li>Ran credentialed and non-credentialed scans.</li>
-    <li>Interpreted CVSS severity, findings, and remediation guidance.</li>
-    <li>Applied ethical scanning principles including scope and rate control.</li>
-  </ul>
-
-  <h3>Network Mapping</h3>
-  <ul>
-    <li>Used SolarWinds Network Topology Mapper for environment visualization.</li>
-    <li>Performed SNMP and WMI-based discovery.</li>
-    <li>Exported and compared network maps over time.</li>
+    <li>Performed reconnaissance and exposure analysis using OSINT techniques.</li>
+    <li>Conducted network discovery and service enumeration.</li>
+    <li>Executed vulnerability scans and interpreted remediation guidance.</li>
+    <li>Studied attacker behavior, network traffic patterns, and security fundamentals.</li>
   </ul>
 </details>
 
 <details>
-  <summary>🔒 Security Fundamentals</summary>
+  <summary>🔒 Security Foundations</summary>
   <ul>
-    <li>Understood the five phases of the attack lifecycle.</li>
-    <li>Reviewed OSI and TCP/IP models and traffic flow.</li>
-    <li>Studied common attack techniques:
-      <ul>
-        <li>XSS, SQL Injection, MITM, DoS, Buffer Overflow.</li>
-      </ul>
-    </li>
-    <li>Learned ethical and legal boundaries of security testing.</li>
+    <li>Understood the attack lifecycle and common threat categories.</li>
+    <li>Reviewed networking models and traffic flow.</li>
+    <li>Studied common attack techniques and defensive considerations.</li>
+    <li>Maintained awareness of ethical and legal testing boundaries.</li>
   </ul>
 </details>
 
