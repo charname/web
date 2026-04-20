@@ -145,7 +145,7 @@ The initial issue was assigning the application dataset as <em>Generic</em> inst
 of <em>App</em>. Recreating the datasets with proper types resolved startup issues.
 </p>
 <p>
-Discovered Immich’s CLI-based recursive upload method via SSH. This approach
+Discovered Immich's CLI-based recursive upload method via SSH. This approach
 automatically detects duplicates, skips already-processed files, and clearly
 reports failed uploads with full file paths.
 </p>
@@ -276,6 +276,77 @@ Deployed static site via GitHub Pages.
 Practiced foundational HTML and CSS.
 </p>
 </details>
+</details>
+
+</details>
+
+<!-- ================= EARLIER ================= -->
+<details>
+<summary><strong>Earlier Milestones</strong></summary>
+
+<details>
+<summary><strong>Nessus Upgrade & FIPS Troubleshooting</strong></summary>
+<p>
+Upgraded Nessus from version 10.9 to 10.11 to resolve persistent scan failures.
+Traced root cause to a FIPS-related plugin timeout and a <code>systemd</code> service timeout
+misconfiguration. Adjusted daemon settings to restore scan stability and validated
+the fix by re-running a previously aborted perimeter scan.
+</p>
+</details>
+
+<details>
+<summary><strong>USB Investigation & Escalation Workflow</strong></summary>
+<p>
+Took ownership of USB written-media investigations using CrowdStrike Falcon telemetry.
+Built a repeatable analysis process: export Falcon data to CSV, convert to Excel,
+build pivot tables to surface high-signal users, and perform qualitative review of
+file names and content types. Identified sensitive data written to removable media
+and produced written findings reports suitable for escalation to leadership and Legal.
+</p>
+</details>
+
+<details>
+<summary><strong>DOCX ↔ PDF Conversion Tool Built</strong></summary>
+<p>
+Built a Python desktop application to handle secure offline document conversion between
+Word and PDF formats. Packaged the tool for standalone deployment, removing the need
+for cloud-based converters when handling sensitive policy documents. Used within the
+IT documentation pipeline to prepare controlled documents for the SharePoint library.
+</p>
+</details>
+
+<details>
+<summary><strong>IT Policy Library Stood Up</strong></summary>
+<p>
+Established a SharePoint-based IT policy library and imported all infosec policies and
+procedures. Defined retention, versioning, approval, ownership, and annual review standards.
+Migrated SOPs, IR checklists, and IT forms; validated metadata alignment between
+document headers and SharePoint fields.
+</p>
+</details>
+
+<details>
+<summary><strong>eDiscovery Tracking System & Forensics Research</strong></summary>
+<p>
+Built a SharePoint-based eDiscovery tracking system to support Legal and HR investigations.
+Executed authorized email and USB activity searches, maintained audit trails,
+and handled evidence with encryption and controlled access.
+In parallel, researched a digital forensics workflow evaluating FTK Imager, KAPE,
+Autopsy, and Cyber Triage. Assessed forensic write blocker options for both NVMe
+and legacy media.
+</p>
+</details>
+
+<details>
+<summary><strong>KnowBe4 Program Operational Transition</strong></summary>
+<p>
+Transitioned KnowBe4 from launch mode into steady-state operations.
+Established weekly campaign monitoring cadence, cleaned up separated users via
+AD-based filtering, corrected notification branding, and coordinated with the
+KnowBe4 TAM on reporting limitations and gamification concepts.
+Validated full automated phishing campaign logic before broad rollout
+and began producing manager-level and executive-level reporting.
+</p>
 </details>
 
 </details>
