@@ -120,37 +120,58 @@
   <h2>Security & Infrastructure Projects</h2>
   <ul>
     <li>
-      <strong>KnowBe4 Phishing Automation Framework</strong> –  
-     Developed a repeatable and automated phishing‑campaign architecture that combines smart groups,
-     tiered difficulty levels (Beginner → Advanced), and a quarterly rollout cadence. Mermaid flowcharts were used to model the design structure, 
-     resulting in a nearly hands‑off system for campaign automation, scheduling, and reporting. </li>
-
-    <li>
-      <strong>Cofense → KnowBe4 Platform Migration</strong> –  
-      Led transition from Cofense to KnowBe4 for phishing simulations and training.
-      Migrated users from Entra ID, configured SCIM provisioning, SSO/SAML, admin MFA,
-      deployed the Phish Alert Button, and validated campaign parity.
+      <strong>KnowBe4 Phishing Automation Framework</strong> –
+      Designed a repeatable phishing-campaign architecture using smart groups, tiered difficulty levels (Beginner → Advanced), and a quarterly rollout cadence. Modeled the design with Mermaid flowcharts, resulting in a near-hands-off system for scheduling, automation, and reporting. Transitioned the program from launch mode into steady-state operations with weekly monitoring, failure trend analysis, and manager-level reporting.
     </li>
 
     <li>
-      <strong>Abnormal Security Email Defense Deployment</strong> –  
-      Assisted in rollout of Abnormal Security as the primary email security platform
-      while phasing out Proofpoint. Completed Abnormal Academy training and supported
-      detection logic validation and user readiness.
+      <strong>Cofense → KnowBe4 Platform Migration</strong> –
+      Led transition from Cofense to KnowBe4 for phishing simulations and security awareness training. Migrated users from Entra ID, configured SCIM provisioning, SSO/SAML, admin MFA, and deployed the Phish Alert Button. Documented SCIM and Smart Group limitations and rebuilt group logic for reliability.
     </li>
 
     <li>
-      <strong>CrowdStrike Sensor & Endpoint Validation</strong> –  
-      Supported Falcon sensor updates, host group changes, and policy validation.
-      Coordinated ServiceNow changes, verified sensor health,
-      and assisted with pre- and post-deployment checks.
+      <strong>Abnormal Security Email Defense Deployment</strong> –
+      Assisted in rolling out Abnormal Security as the primary email security platform, phasing out Proofpoint. Completed Abnormal Academy training (SOC Analyst Essentials, Account Takeover, Email Security) and supported detection logic validation and user readiness.
     </li>
 
     <li>
-      <strong>Next-Gen SIEM Evaluation (CrowdStrike)</strong> –  
-      Participated in planning and evaluation of Falcon Next-Gen SIEM.
-      Reviewed ingestion models, LogScale search, Charlotte AI,
-      SOAR workflows, and identity/endpoint telemetry integration.
+      <strong>CrowdStrike Sensor & Endpoint Validation</strong> –
+      Supported Falcon sensor updates, host group changes, and policy validation. Coordinated ServiceNow change controls, verified sensor health, and assisted with pre- and post-deployment checks across test and production environments.
+    </li>
+
+    <li>
+      <strong>USB Written-Media Investigation Program</strong> –
+      Took ownership of CrowdStrike USB media investigations: exporting Falcon telemetry, converting CSV to Excel, building pivot tables to identify high-signal users, and performing qualitative file-name and content risk review. Produced written reports summarizing findings and risk indicators; escalated sensitive findings to leadership.
+    </li>
+
+    <li>
+      <strong>Next-Gen SIEM Evaluation (CrowdStrike)</strong> –
+      Participated in planning and evaluation of Falcon Next-Gen SIEM. Reviewed ingestion models, LogScale search, Charlotte AI, SOAR workflows, and identity/endpoint telemetry integration. Also researched Wazuh, Greenbone, and Zabbix as complementary tooling.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Documentation & Governance Projects</h2>
+  <ul>
+    <li>
+      <strong>IT Policy Library & Controlled-Document Governance</strong> –
+      Established a SharePoint-based IT policy library, importing all infosec policies and procedures. Defined retention and versioning standards, approval and ownership workflows, and annual review requirements. Migrated SOPs, IR checklists, and IT forms; validated metadata alignment between document headers and SharePoint fields.
+    </li>
+
+    <li>
+      <strong>DOCX ↔ PDF Conversion Tool</strong> –
+      Built a Python desktop application for secure offline document conversion between Word and PDF formats. Packaged and debugged the tool for standalone deployment within a controlled policy pipeline, eliminating dependency on cloud-based converters for sensitive documents.
+    </li>
+
+    <li>
+      <strong>Power Automate Governance Workflows</strong> –
+      Prototyped Power Automate flows to support automated document approvals, metadata syncing, and annual policy review task generation. Designed around a service-account model for audit-ready evidence paths.
+    </li>
+
+    <li>
+      <strong>eDiscovery & Legal Hold Tracking System</strong> –
+      Built and maintained a SharePoint-based eDiscovery tracking system for Legal and HR. Executed authorized email and USB activity searches, handled evidence with encryption and controlled access, and maintained audit trails throughout investigations.
     </li>
   </ul>
 </section>
@@ -159,17 +180,13 @@
   <h2>Automation & Development Projects</h2>
   <ul>
     <li>
-      <strong>Internal API Mini-Project</strong> –  
-      Designed and tested a small internal API to support automation learning.
-      Implemented authentication, data retrieval, JSON parsing,
-      and structured error handling using Python.
+      <strong>Security Data Automation Scripts</strong> –
+      Built PowerShell and Python scripts to process asset exports, generate Excel reports, and create pivot-based remediation tracking for vulnerability and endpoint investigations. Automated CSV → Excel → pivot workflows for consistent security reporting outputs.
     </li>
 
     <li>
-      <strong>Security Data Automation Scripts</strong> –  
-      Built PowerShell and Python scripts to process asset exports,
-      generate Excel reports, and create pivot-based remediation tracking
-      for vulnerability and endpoint investigations.
+      <strong>Internal API Mini-Project</strong> –
+      Designed and tested a small internal API to support automation learning. Implemented authentication, data retrieval, JSON parsing, and structured error handling using Python.
     </li>
   </ul>
 </section>
@@ -178,16 +195,13 @@
   <h2>Lab & Infrastructure Projects</h2>
   <ul>
     <li>
-      <strong>Security Lab Environment</strong> –  
-      Built a multi-VM lab using VirtualBox and Proxmox with
-      Windows, Linux, and Kali systems.
-      Used for API testing, CVE reproduction, and sensor evaluation.
+      <strong>Security Lab Environment</strong> –
+      Built a multi-VM lab using VirtualBox and Proxmox with Windows, Linux, and Kali systems. Configured network isolation and adapter separation for external scanning. Used for API testing, CVE reproduction, Nessus perimeter scanning, and sensor evaluation.
     </li>
 
     <li>
-      <strong>TrueNAS SCALE & Container Experiments</strong> –  
-      Migrated from TrueNAS Core to SCALE to support Docker workloads.
-      Tested Immich deployment, dataset tuning, and container behavior.
+      <strong>TrueNAS SCALE & Container Experiments</strong> –
+      Migrated from TrueNAS Core to SCALE to support Docker workloads. Tested Immich deployment, dataset type configuration, and container behavior. Resolved application startup failures caused by incorrect dataset types.
     </li>
   </ul>
 </section>
