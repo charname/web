@@ -127,38 +127,126 @@
 
 <h2>Skill Development</h2>
 <p>
-This page highlights hands-on development, systems, and security capabilities.
-The focus is on applied learning, experimentation, and building practical tools —
-not certifications or coursework.
+Hands-on development, security, and systems capabilities built through applied work,
+experimentation, and real operational involvement — not just coursework.
 </p>
 
 <details open>
-  <summary>🌐 Web & Publishing</summary>
+  <summary>🔐 Phishing & Security Awareness</summary>
   <ul>
-    <li>Built and published a static website using GitHub Pages.</li>
-    <li>Implemented HTML and CSS for layout, navigation, and responsive styling.</li>
-    <li>Structured multi-page navigation and internal linking.</li>
-    <li>Used semantic elements and collapsible sections for clarity.</li>
+    <li>Designed and operated multi-tier phishing campaigns (Beginner / Intermediate / Advanced) across Cofense and KnowBe4.</li>
+    <li>Led Cofense → KnowBe4 migration: SCIM provisioning, SSO/SAML, MFA, platform allow-listing, and Phish Alert Button deployment.</li>
+    <li>Built a repeatable phishing automation framework requiring minimal quarterly maintenance.</li>
+    <li>Produced quarterly reports: failure rates, reporting rates, credential submits, executive summaries, and manager-level risk trends.</li>
+    <li>Implemented tiered escalation models for repeated failures, coordinated with HR and leadership on enforcement discussions.</li>
+    <li>Ran controlled test simulations and validated full automated campaign logic before broad rollout.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🛡️ Vulnerability Management</summary>
+  <ul>
+    <li>Installed and configured Nessus for credentialed internal scans and external perimeter assessments.</li>
+    <li>Executed targeted scans for CVE-specific conditions; responded to direct CVE requests with actionable remediation outputs.</li>
+    <li>Troubleshot scan failures including FIPS-related plugin timeouts, network adapter conflicts, and systemd timeout issues.</li>
+    <li>Performed Nessus upgrades (10.9 → 10.11) and maintained plugin lifecycle.</li>
+    <li>Exported findings to PDF and CSV; built Excel pivot tables for stakeholder-ready remediation tracking.</li>
+    <li>Used CrowdStrike Falcon Spotlight for CVE lookup and structured vulnerability reporting.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🧠 SIEM & Security Monitoring</summary>
+  <ul>
+    <li>Performed USB written-media investigations using CrowdStrike Falcon telemetry: CSV exports, pivot tables, file-name risk review, and written escalation reports.</li>
+    <li>Identified sensitive data written to removable media (financial documents, passports); escalated findings through proper channels.</li>
+    <li>Studied SIEM architecture, detection pipelines, and SOC analyst workflows.</li>
+    <li>Evaluated Falcon Next-Gen SIEM ingestion models, LogScale search, Charlotte AI, and SOAR workflow integration.</li>
+    <li>Researched Wazuh, Greenbone, and Zabbix as complementary monitoring tools.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>⚖️ eDiscovery, Legal Hold & Forensics</summary>
+  <ul>
+    <li>Executed authorized eDiscovery searches (email and USB activity) for Legal and HR matters.</li>
+    <li>Built and maintained a SharePoint-based eDiscovery tracking system with audit trails and controlled access.</li>
+    <li>Designed an internal digital forensics workflow evaluating FTK Imager, KAPE, Autopsy, and Cyber Triage.</li>
+    <li>Evaluated forensic write blockers for NVMe and legacy media.</li>
+    <li>Handled evidence with encryption and chain-of-custody discipline throughout investigations.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🧾 Documentation & Governance</summary>
+  <ul>
+    <li>Stood up a SharePoint IT policy library; imported and normalized all infosec policies and procedures.</li>
+    <li>Defined retention, versioning, approval, ownership, and annual review standards for controlled documents.</li>
+    <li>Authored operating procedures for Legal Hold reviews, IT P&P lifecycle, CrowdStrike event escalation, and BitSight response.</li>
+    <li>Built a Python desktop app for secure offline DOCX ↔ PDF conversion for policy pipeline use.</li>
+    <li>Prototyped Power Automate flows for approval workflows, metadata syncing, and annual review automation.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🧰 Scripting & Automation</summary>
+  <ul>
+    <li>Built PowerShell scripts for access reviews and AD user-manager correlation.</li>
+    <li>Automated CSV → Excel → pivot workflows for security reporting and vulnerability tracking.</li>
+    <li>Wrote Python scripts for asset processing, API testing, and data reconciliation.</li>
+    <li>Packaged and debugged internal Python tooling for standalone deployment.</li>
+    <li>Prototyped Power Automate workflows for governance and document lifecycle management.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🕵️ Reconnaissance & OSINT</summary>
+  <ul>
+    <li>Practiced Google Dorking and advanced search operators for passive reconnaissance and exposure discovery.</li>
+    <li>Used metadata extraction tools (e.g., Metagoofil) to identify leaked document information.</li>
+    <li>Performed email header analysis including routing, WHOIS, geolocation, and SPF/DKIM/DMARC validation.</li>
+    <li>Investigated DNS, WHOIS, and IP intelligence using <code>whois</code>, <code>dig</code>, <code>nslookup</code>, and passive DNS tools.</li>
+    <li>Differentiated passive vs. active reconnaissance phases with emphasis on legality and attribution limits.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🌍 Network Discovery & Scanning</summary>
+  <ul>
+    <li>Conducted Nmap scans using SYN, service detection, OS fingerprinting, and NSE scripts.</li>
+    <li>Interpreted results from MXToolbox, DNSDumpster, and <code>dig</code> for infrastructure mapping.</li>
+    <li>Analyzed TCP handshake behavior, RST responses, and firewall filtering indicators.</li>
+    <li>Validated external scan paths using multi-NIC virtualized lab setups for perimeter testing.</li>
+    <li>Documented scan commands, timestamps, and findings for repeatability and audit use.</li>
   </ul>
 </details>
 
 <details>
   <summary>🐍 Python & Automation</summary>
   <ul>
-    <li>Worked with core Python constructs: functions, control flow, and data structures.</li>
-    <li>Built small functional tools and scripts for automation and data handling.</li>
+    <li>Worked with core Python constructs: functions, control flow, data structures, and file I/O.</li>
+    <li>Built functional tools and scripts for automation, API interaction, and data handling.</li>
     <li>Created a desktop GUI application using Tkinter.</li>
-    <li>Explored API interaction and structured data processing.</li>
+    <li>Explored structured data processing and error handling patterns.</li>
   </ul>
 </details>
 
 <details>
   <summary>💾 Systems & Virtualization</summary>
   <ul>
-    <li>Deployed and administered TrueNAS (Core and SCALE).</li>
-    <li>Configured datasets, permissions, and storage layouts.</li>
-    <li>Used Docker for controlled application testing.</li>
-    <li>Built virtual lab environments for experimentation and validation.</li>
+    <li>Built security labs using Kali Linux, Nessus, Linux servers, and Windows endpoints.</li>
+    <li>Configured network isolation and adapter separation for external scanning scenarios.</li>
+    <li>Deployed and administered TrueNAS (Core and SCALE); configured datasets, permissions, and storage layouts.</li>
+    <li>Used Docker for controlled application testing and self-hosted service deployment.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🌐 Web & Publishing</summary>
+  <ul>
+    <li>Built and published a static website using GitHub Pages.</li>
+    <li>Implemented HTML and CSS for layout, navigation, and responsive styling.</li>
+    <li>Structured multi-page navigation and internal linking across a growing site.</li>
   </ul>
 </details>
 
@@ -168,26 +256,6 @@ not certifications or coursework.
     <li>Installed and configured ComfyUI with custom models.</li>
     <li>Experimented with image and video generation workflows.</li>
     <li>Evaluated performance, storage, and GPU resource constraints.</li>
-  </ul>
-</details>
-
-<details>
-  <summary>🛡️ Cybersecurity & Networking</summary>
-  <ul>
-    <li>Performed reconnaissance and exposure analysis using OSINT techniques.</li>
-    <li>Conducted network discovery and service enumeration.</li>
-    <li>Executed vulnerability scans and interpreted remediation guidance.</li>
-    <li>Studied attacker behavior, network traffic patterns, and security fundamentals.</li>
-  </ul>
-</details>
-
-<details>
-  <summary>🔒 Security Foundations</summary>
-  <ul>
-    <li>Understood the attack lifecycle and common threat categories.</li>
-    <li>Reviewed networking models and traffic flow.</li>
-    <li>Studied common attack techniques and defensive considerations.</li>
-    <li>Maintained awareness of ethical and legal testing boundaries.</li>
   </ul>
 </details>
 
